@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.ProfileFragment">
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="22dp"
+            android:elevation="8dp"
+            app:cardCornerRadius="25sp"
+            android:backgroundTint="@color/secondaryLight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <ImageView
+                    android:id="@+id/profileImage"
+                    android:layout_width="100sp"
+                    android:layout_height="100sp"
+                    android:layout_margin="25dp"
+                    android:src="@drawable/user_24"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/profileNameAndId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="24dp"
+                    android:gravity="center"
+                    android:text="Ahmad Khaled Hasan Suleiman\n31901001081"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/profileImage" />
+
+
+                <TextView
+                    android:id="@+id/profileStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20sp"
+                    android:text="Status: على مقاعد الدراسة"
+                    app:layout_constraintBottom_toTopOf="@id/profileDetailsImage"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/profileNameAndId" />
+
+                <TextView
+                    android:id="@+id/profileAverage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20sp"
+                    android:text="Average: 3.7"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/profileDetailsImage" />
+
+                <ImageView
+                    android:id="@+id/profileDetailsImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    android:src="@drawable/ic_outline_keyboard_arrow_down_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView"
+            style="@style/BottomCardViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="10sp"
+            android:layout_marginEnd="10sp"
+            android:layout_marginTop="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <!--first indicator-->
+                    <com.google.android.material.progressindicator.CircularProgressIndicator
+                        android:id="@+id/firstIndicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="40sp"
+                        android:indeterminate="false"
+                        android:progress="75"
+                        app:indicatorSize="100sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                         />
+
+                    <TextView
+                        android:id="@+id/firstTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20sp"
+                        android:text="متطلب جامعة اجباري"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toTopOf="@+id/firstIndicator"
+                        app:layout_constraintEnd_toEndOf="@id/firstIndicator"
+                        app:layout_constraintStart_toStartOf="@id/firstIndicator"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <TextView
+                        android:id="@+id/firstNumbers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="@id/firstIndicator"
+                        app:layout_constraintEnd_toEndOf="@id/firstIndicator"
+                        app:layout_constraintTop_toTopOf="@id/firstIndicator"
+                        app:layout_constraintBottom_toBottomOf="@id/firstIndicator"
+                        android:textSize="16sp"
+                        android:text="22/30"
+                        />
+
+                    <!--first indicator end-->
+
+                    <!--second indicator-->
+                    <com.google.android.material.progressindicator.CircularProgressIndicator
+                        android:id="@+id/secondIndicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="40sp"
+                        android:indeterminate="false"
+                        android:progress="66"
+                        app:indicatorSize="100sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                         />
+                    <TextView
+                        android:id="@+id/secondTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:layout_marginTop="20sp"
+                        android:text="متطلب تخصص اختياري"
+                        app:layout_constraintBottom_toTopOf="@+id/secondIndicator"
+                        app:layout_constraintEnd_toEndOf="@id/secondIndicator"
+                        app:layout_constraintStart_toStartOf="@id/secondIndicator"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <TextView
+                        android:id="@+id/secondNumbers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="@id/secondIndicator"
+                        app:layout_constraintEnd_toEndOf="@id/secondIndicator"
+                        app:layout_constraintTop_toTopOf="@id/secondIndicator"
+                        app:layout_constraintBottom_toBottomOf="@id/secondIndicator"
+                        android:textSize="16sp"
+                        android:text="3/12"
+                        />
+
+                    <!--second indicator end-->
+
+                    <!--third indicator-->
+                    <com.google.android.material.progressindicator.CircularProgressIndicator
+                        android:id="@+id/thirdIndicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="40sp"
+                        android:indeterminate="false"
+
+                        app:indicatorSize="100sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/secondIndicator"
+                         />
+                    <TextView
+                        android:id="@+id/thirdTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toTopOf="@+id/thirdIndicator"
+                        app:layout_constraintEnd_toEndOf="@+id/thirdIndicator"
+                        app:layout_constraintStart_toStartOf="@+id/thirdIndicator"
+                        />
+                    <TextView
+                        android:id="@+id/thirdNumbers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="@id/thirdIndicator"
+                        app:layout_constraintEnd_toEndOf="@id/thirdIndicator"
+                        app:layout_constraintTop_toTopOf="@id/thirdIndicator"
+                        app:layout_constraintBottom_toBottomOf="@id/thirdIndicator"
+                        android:textSize="16sp"
+
+                        />
+                    <!--third indicator end-->
+
+                    <!--fourth indicator-->
+                    <com.google.android.material.progressindicator.CircularProgressIndicator
+                        android:id="@+id/fourthIndicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="40sp"
+                        android:indeterminate="false"
+
+                        app:indicatorSize="100sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/secondIndicator"
+                         />
+                    <TextView
+                        android:id="@+id/fourthTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toTopOf="@+id/fourthIndicator"
+                        app:layout_constraintEnd_toEndOf="@+id/fourthIndicator"
+                        app:layout_constraintStart_toStartOf="@+id/fourthIndicator"
+                        />
+                    <TextView
+                        android:id="@+id/fourthNumbers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="@id/fourthIndicator"
+                        app:layout_constraintEnd_toEndOf="@id/fourthIndicator"
+                        app:layout_constraintTop_toTopOf="@id/fourthIndicator"
+                        app:layout_constraintBottom_toBottomOf="@id/fourthIndicator"
+                        android:textSize="16sp"
+
+                        />
+                    <!--forth indicator end-->
+
+                    <!--fifth indicator-->
+                    <com.google.android.material.progressindicator.CircularProgressIndicator
+                        android:id="@+id/fifthIndicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="40sp"
+                        android:indeterminate="false"
+
+                        app:indicatorSize="100sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/fourthIndicator"
+                         />
+                    <TextView
+                        android:id="@+id/fifthTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toTopOf="@+id/fifthIndicator"
+                        app:layout_constraintEnd_toEndOf="@+id/fifthIndicator"
+                        app:layout_constraintStart_toStartOf="@+id/fifthIndicator"
+                        />
+                    <TextView
+                        android:id="@+id/fifthNumbers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="@id/fifthIndicator"
+                        app:layout_constraintEnd_toEndOf="@id/fifthIndicator"
+                        app:layout_constraintTop_toTopOf="@id/fifthIndicator"
+                        app:layout_constraintBottom_toBottomOf="@id/fifthIndicator"
+                        android:textSize="16sp"
+
+                        />
+                    <!--fifth indicator end-->
+
+                    <!--sixth indicator-->
+                    <com.google.android.material.progressindicator.CircularProgressIndicator
+                        android:id="@+id/sixthIndicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="40sp"
+                        android:indeterminate="false"
+
+                        app:indicatorSize="100sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/fourthIndicator"
+                         />
+                    <TextView
+                        android:id="@+id/sixthTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toTopOf="@+id/sixthIndicator"
+                        app:layout_constraintEnd_toEndOf="@+id/sixthIndicator"
+                        app:layout_constraintStart_toStartOf="@+id/sixthIndicator"
+                        />
+                    <TextView
+                        android:id="@+id/sixthNumbers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="@id/sixthIndicator"
+                        app:layout_constraintEnd_toEndOf="@id/sixthIndicator"
+                        app:layout_constraintTop_toTopOf="@id/sixthIndicator"
+                        app:layout_constraintBottom_toBottomOf="@id/sixthIndicator"
+                        android:textSize="16sp"
+
+                        />
+                    <!--sixth indicator end-->
+
+                    <!--seventh indicator-->
+                    <com.google.android.material.progressindicator.CircularProgressIndicator
+                        android:id="@+id/seventhIndicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="40sp"
+                        android:indeterminate="false"
+
+                        app:indicatorSize="100sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/sixthIndicator"
+                         />
+                    <TextView
+                        android:id="@+id/seventhTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toTopOf="@+id/seventhIndicator"
+                        app:layout_constraintEnd_toEndOf="@+id/seventhIndicator"
+                        app:layout_constraintStart_toStartOf="@+id/seventhIndicator"
+                        />
+                    <TextView
+                        android:id="@+id/seventhNumbers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="@id/seventhIndicator"
+                        app:layout_constraintEnd_toEndOf="@id/seventhIndicator"
+                        app:layout_constraintTop_toTopOf="@id/seventhIndicator"
+                        app:layout_constraintBottom_toBottomOf="@id/seventhIndicator"
+                        android:textSize="16sp"
+
+                        />
+                    <!--seventh indicator end-->
+
+                    <!--eighth indicator-->
+                    <com.google.android.material.progressindicator.CircularProgressIndicator
+                        android:id="@+id/eighthIndicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="40sp"
+                        android:indeterminate="false"
+
+                        app:indicatorSize="100sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/sixthIndicator"
+                         />
+                    <TextView
+                        android:id="@+id/eighthTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toTopOf="@+id/eighthIndicator"
+                        app:layout_constraintEnd_toEndOf="@+id/eighthIndicator"
+                        app:layout_constraintStart_toStartOf="@+id/eighthIndicator"
+                        />
+                    <TextView
+                        android:id="@+id/eighthNumbers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="@id/eighthIndicator"
+                        app:layout_constraintEnd_toEndOf="@id/eighthIndicator"
+                        app:layout_constraintTop_toTopOf="@id/eighthIndicator"
+                        app:layout_constraintBottom_toBottomOf="@id/eighthIndicator"
+                        android:textSize="16sp"
+
+                        />
+                    <!--eighth indicator end-->
+
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </ScrollView>
+        </com.google.android.material.card.MaterialCardView>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

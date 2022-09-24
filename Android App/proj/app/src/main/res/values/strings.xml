@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Bau Assistant</string>
+    <string name="aboutText">This app is a graduation project for Al-Balqa Applied University all the data used in the app are brought from the Registration site no data is saved to a third party server.The focus of this app is to show the benefits of having an api for our university witch includes opening the path for creative students to utilize the data to get more functionality out of it</string>
+    <string name="onlineText">جائحة كورونا أتت و أتى معها الكثير من التغيرات و احداها ضهور التعليم الالكتروني و من يومها تم تغير نمط اعطاء بعض المواد لنتلائم مع هذا التطور لذلك سنتعرف على تطبيق Microsoft teams</string>
+    <string name="teamsDescription">يُعد مايكروسوفت تيمز نظامًا أساسيًا موحدًا للاتصال والتعاون يجمع بين الدردشة المستمرة في مكان العمل واجتماعات الفيديو وتخزين الملفات (بما في ذلك التعاون في الملفات) وتكامل التطبيقات</string>
+</resources>

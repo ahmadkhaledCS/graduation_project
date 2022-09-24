@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/toolsBottom"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_construction_24"
+        android:title="Tools"/>
+    <item
+        android:id="@+id/profileBottom"
+        android:enabled="true"
+        android:icon="@drawable/ic_outline_home_24"
+        android:title="Home"/>
+    <item
+        android:id="@+id/settingsBottom"
+        android:enabled="true"
+        android:icon="@drawable/manage_accounts"
+        android:title="Settings"/>
+</menu>
